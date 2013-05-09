@@ -1,0 +1,49 @@
+# DBVM environment configuration file
+
+# Path for scripts
+export PATH=$DBVM_HOME/scripts:$PATH
+
+# Base processing
+export DBVM_LEVEL1=<%= node['dbvm']['DBVM_LEVEL1'] %>			# MODIS Level 1B products
+export DBVM_ATMOS=<%= node['dbvm']['DBVM_ATMOS'] %>				# MODIS Atmosphere products
+
+# Optional processing 
+export DBVM_DEM=<%= node['dbvm']['DBVM_DEM'] %>				# MODIS Geolocation terrain correction
+export DBVM_IMAGE=<%= node['dbvm']['DBVM_IMAGE'] %>				# MODIS GeoTIFF and JPEG image products
+export DBVM_DBGE=<%= node['dbvm']['DBVM_DBGE'] %>				# MODIS Google Earth image products
+export DBVM_LAND=<%= node['dbvm']['DBVM_LAND'] %>				# MODIS Land products (requires DBVM_DEM=YES)
+export DBVM_MOD09=<%= node['dbvm']['DBVM_MOD09'] %>				# MODIS Land Surface Reflectance products (requires DBVM_LAND=YES)
+export DBVM_OCEAN=<%= node['dbvm']['DBVM_OCEAN'] %>				# MODIS Ocean products
+export DBVM_AIRS=<%= node['dbvm']['DBVM_AIRS'] %>				# AIRS products (Aqua only)
+export DBVM_AMSRE=<%= node['dbvm']['DBVM_AMSRE'] %>				# AMSR-E products (Aqua only)
+export DBVM_USER=<%= node['dbvm']['DBVM_USER'] %>				# User-defined products
+
+# Directory names
+export ERROR_DIR=<%= node['dbvm']['ERROR_DIR'] %>
+export LOG_DIR=<%= node['dbvm']['LOG_DIR'] %>
+export DATA_DIR=<%= node['dbvm']['DATA_DIR'] %>
+export IMAGE_DIR=<%= node['dbvm']['IMAGE_DIR'] %>
+export L0_DIR=<%= node['dbvm']['L0_DIR'] %>
+export L1_DIR=<%= node['dbvm']['L1_DIR'] %>
+export L2_DIR=<%= node['dbvm']['L2_DIR'] %>
+export WORK_DIR=<%= node['dbvm']['WORK_DIR'] %>
+
+# Data ingest options
+export DBVM_LOCAL_DATA=<%= node['dbvm']['DBVM_LOCAL_DATA'] %>
+export DBVM_LOCAL_DIR=<%= node['dbvm']['DBVM_LOCAL_DIR'] %>
+export DBVM_LOCAL_INTERVAL=<%= node['dbvm']['DBVM_LOCAL_INTERVAL'] %>
+export DBVM_FTP_DATA=<%= node['dbvm']['DBVM_FTP_DATA'] %>
+export DBVM_FTP_DIR=<%= node['dbvm']['DBVM_FTP_DIR'] %>
+export DBVM_FTP_INTERVAL=<%= node['dbvm']['DBVM_FTP_INTERVAL'] %>
+
+# Data retention time (days)
+export DBVM_RETAIN=<%= node['dbvm']['DBVM_RETAIN'] %>
+
+# Data archive options
+export DBVM_ARCHIVE=<%= node['dbvm']['DBVM_ARCHIVE'] %>
+export DBVM_ARCHIVE_DIR=<%= node['dbvm']['DBVM_ARCHIVE_DIR'] %>
+export DBVM_HDF_COMPRESS=<%= node['dbvm']['DBVM_HDF_COMPRESS'] %>
+
+# Locations for leapsec.dat and utcpole.dat
+export DBVM_LEAPSEC=<%= node['dbvm']['DBVM_LEAPSEC'] %>
+export DBVM_UTCPOLE=<%= node['dbvm']['DBVM_UTCPOLE'] %>
